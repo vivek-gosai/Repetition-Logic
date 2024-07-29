@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+            <p>is an Palindrome number(<span id="n1"></span>)</p>
+            <p>is not an Palindrome number(<span id="n2"></span>)</p>
+       
+            <h1 id="number" ></h1>
+            <h2 id="number-1" ></h2>
+      
+
+    <script>
+        let num,num_2,reverse;
+
+        num = prompt("Enter your Number");
+        num_2 = num;
+        reverse = 0;
+
+        while(num != 0){
+            reverse = (reverse*10) + (num % 10);
+            num = parseInt(num/10);
+        }
+        
+        if(num_2 == reverse){
+            document.getElementById("number").innerHTML = reverse + "=(is an Palindrome number)";
+        }else{
+            document.getElementById("number-1").innerHTML = reverse + "=(is not an Palindrome number)";
+        }
+    </script>
+</body>
+</html>

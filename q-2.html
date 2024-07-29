@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <p>factorial no:- (<span id="number-1"></span>)</p>
+        
+            <h1 id="number"></h1>
+      
+    <script>
+        let i = 1,fact=1;
+        let nu = parseInt(prompt("Enter your number"));
+
+        document.getElementById("number-1").innerHTML = nu;
+
+        while (i <= nu) {
+            fact = fact*i;
+            document.getElementById("number").innerHTML = fact;
+            i++;
+        }  
+    </script>
+</body>
+</html>

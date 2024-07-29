@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <h1 id="value"></h1>
+   <h2 id="value-1"></h2>
+    <script>
+
+        let number, num, digitCount, sum, digit;
+        number = parseInt(prompt("Enter your positive number :-"));
+        num = number;
+        digitCount = 0;
+        while (num > 0) {
+
+            num = Math.floor(num / 10);
+            digitCount++;
+
+        }
+
+        sum = 0;
+        num = number;
+        while (num > 0) {
+
+            digit = num % 10;
+            sum += Math.pow(digit, digitCount);
+            num = Math.floor(num / 10); 
+            digitCount--;
+
+        }
+
+        if (sum == number) {
+            document.getElementById("value").innerHTML = number;
+        } else {
+            document.getElementById("value-1").innerHTML = number;
+        }
+    </script>
+</body>
+
+</html>

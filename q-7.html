@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <h1>this is a magic number</h1>
+   <span id="number"></span>
+            <td id="number-1" align="center"></td>
+    <h2>this is not a magic number</h2>
+    <span id="number-1"></span>
+    <script>
+
+        let no_1 = prompt("Enter your number:- ");
+        let no_2= no_1;
+        let sum = no_1;
+
+        while (no_2 > 9) {
+            sum = 0;
+            while (no_2 > 0) {
+                sum += no_2 % 10;
+                no_2 = parseInt(no_2 / 10);
+            }
+            no_2 = sum;
+        }
+
+        if (sum == 1) {
+            document.getElementById("number").innerHTML = no_1;
+        } else {
+            document.getElementById("number-1").innerHTML = no_1; 
+        }
+        
+    </script>
+</body>
+
+</html>

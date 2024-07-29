@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="n1"></p>
+    <script>
+
+        let i = 1;
+
+        do {
+
+            if (i % 3 === 0 && i % 5 === 0) {
+                document.getElementById("n1").innerHTML += i + "-(FizzBuzz)" + "</br>";
+            } else if (i % 3 === 0) {
+                document.getElementById("n1").innerHTML += i + "-(Fizz)" + "</br>";
+
+            } else if (i % 5 === 0) {
+                document.getElementById("n1").innerHTML += i + "-(Buzz)" + "</br>";
+
+            } else {
+                document.getElementById("n1").innerHTML += i  + "</br>";
+
+            }
+            i++;
+
+        } while (i <= 100);
+
+    </script>
+</body>
+
+</html>

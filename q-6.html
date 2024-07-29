@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+            <h1>is a prime number</h1>
+            <h2>is not a prime number</h2>
+            <h3>is neither prime nor composite number</h3>
+        
+            <span id="number"></span> 
+            <span id="number-1"></span>
+            <span id="number-2"></span>
+   
+
+    <script>
+
+        const number = parseInt(prompt("Enter a positive number: "));
+        let truenumber = true;
+
+        if (number === 1) {
+            document.getElementById("number-2").innerHTML += number + "=(is neither prime nor composite number.)";
+        }
+
+        else if (number > 1) {
+
+            let i=2;
+
+            while(i < number){
+                if (number % i == 0) {
+                    truenumber = false;
+                    break;
+                }
+                i++; 
+            }
+
+            if (truenumber) {
+                document.getElementById("number").innerHTML += number + "=(is a prime number)";
+            } else {
+                document.getElementById("number-1").innerHTML += number + "=(is a not prime number)";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

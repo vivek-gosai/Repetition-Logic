@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+            <p>is an Armstrong number</p>
+            <p>is not an Armstrong number</p>
+        
+            <h1 id="number"></h2>
+            <h2 id="number-1"></h2>
+      
+
+    <script>
+        let nu,digits,sum,a
+        nu = prompt("Enter your number");
+        digits = nu.length;
+        sum = 0;
+        a = nu;
+
+        while (a > 0) {
+            var b = a % 10;
+            sum += (b ** digits);
+            a = parseInt(a / 10);
+        }
+
+        if (sum == nu){
+            document.getElementById("number").innerHTML = nu +"-"+"is an Armstrong number";
+        }else{
+            document.getElementById("number-1").innerHTML = nu +"-"+"is not an Armstrong number";
+        }
+    </script>
+</body>
+
+</html>
